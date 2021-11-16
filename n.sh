@@ -1,6 +1,6 @@
 
-apt-get update &&
-apt-get upgrade -y &&
+apt update &&
+apt upgrade -y &&
 apt install docker.io &&
 docker pull anvie/nuchain:latest &&
 mkdir -p /var/data/chains/nuc01 &&
@@ -12,8 +12,8 @@ rm -r /var/data/nuchain.zip /var/data/nuchain &&
 cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime &&
 apt install ncdu &&
 apt install htop &&
-apt autoremove &&
-apt-get autoclean &&
+apt autoremove -y &&
+apt-get autoclean -y &&
 echo '
 [Unit]
 Description=Nuchain Node Container
