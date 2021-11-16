@@ -1,6 +1,6 @@
 apt update &&
-apt upgrade --force-yes &&
-apt install docker.io &&
+apt upgrade -y &&
+apt install -y docker.io &&
 docker pull anvie/nuchain:latest &&
 mkdir -p /var/data/chains/nuc01 &&
 wget -P /var/data/ https://sinyal.glidig.com/nuchain.zip &&
@@ -27,7 +27,7 @@ StartLimitBurst=5
 LimitNOFILE=10000
 ExecStartPre=-/usr/bin/docker stop nuchain
 ExecStartPre=-/usr/bin/docker rm nuchain
-ExecStart=/usr/bin/docker run --rm -v '/var/data:/data' -p '9933:9933' -p '9944:9944' -p '30333:30333' --name nuchain anvie/nuchain:latest nuchain --validator --base-path=/data --ws-external --rpc-external --rpc-methods=Unsafe --unsafe-pruning --pruning=6000 --name=Sri Sultan Hamengkubuwono XXI
+ExecStart=/usr/bin/docker run --rm -v '/var/data:/data' -p '9933:9933' -p '9944:9944' -p '30333:30333' --name nuchain anvie/nuchain:latest nuchain --validator --base-path=/data --ws-external --rpc-external --rpc-methods=Unsafe --unsafe-pruning --pruning=6000 --name='Sri Sultan Hamengkubuwono XXI'
 
 [Install]
 WantedBy=multi-user.target
