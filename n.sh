@@ -1,6 +1,6 @@
 
 apt update &&
-apt upgrade --yes &&
+apt upgrade --force-yes &&
 apt install docker.io &&
 docker pull anvie/nuchain:latest &&
 mkdir -p /var/data/chains/nuc01 &&
