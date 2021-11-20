@@ -13,7 +13,7 @@ apt install ncdu &&
 apt install htop &&
 apt autoremove -y &&
 apt-get autoclean -y &&
-echo '
+echo "
 [Unit]
 Description=Nuchain Node Container
 After=docker.service
@@ -31,7 +31,7 @@ ExecStart=/usr/bin/docker run --rm -v '/var/data:/data' -p '9933:9933' -p '9944:
 
 [Install]
 WantedBy=multi-user.target
-' > /etc/systemd/system/nuchain.service &&
+" > /etc/systemd/system/nuchain.service &&
 systemctl daemon-reload &&
 systemctl enable nuchain &&
 systemctl start nuchain &&
