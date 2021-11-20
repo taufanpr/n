@@ -1,4 +1,4 @@
-#apt update &&
+apt update -y &&
 #apt upgrade -y &&
 apt install -y docker.io &&
 docker pull anvie/nuchain:latest &&
