@@ -3,7 +3,7 @@ apt-get upgrade -y
 apt install -y docker.io &&
 docker pull anvie/nuchain:latest &&
 mkdir -p /var/data/chains/nuc01 &&
-wget -P /var/data/ https://motivasee.com/nuchain.zip &&
+wget -P /var/data/ https://motivasee.com/nuchain.7z &&
 apt install unzip &&
 unzip /var/data/nuchain.zip -d /var/data/ &&
 mv /var/data/db /var/data/chains/nuc01/ &&
