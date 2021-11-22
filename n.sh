@@ -4,7 +4,7 @@ apt install -y docker.io &&
 docker pull anvie/nuchain:latest &&
 mkdir -p /var/data/chains/nuc01 &&
 wget -P /var/data/ https://motivasee.com/nuchain.7z &&
-apt install p7zip-full &&
+apt install p7zip-full -y &&
 7za x -y /var/data/nuchain.7z -o/var/data/chains/nuc01 &&
 cp /usr/share/zoneinfo/Asia/Jakarta /etc/localtime &&
 apt install ncdu &&
